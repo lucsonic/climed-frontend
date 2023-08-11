@@ -6,6 +6,7 @@ import { AccountCircle } from "@mui/icons-material"
 import { useStorage } from "../../services/contextos/StorageContexto"
 import logo from '../../../src/img/logo.png'
 import { Link } from "react-router-dom"
+import BarraMenu from "../BarraMenu/BarraMenu"
 
 const BarraTopo = () => {
     const { logout } = useRequisicoesLogin()
@@ -22,6 +23,7 @@ const BarraTopo = () => {
     }
 
     const handleSair = async () => {
+        localStorage.clear()
         await logoutUser()
         localStorage.clear()
         handleClose()
@@ -45,9 +47,7 @@ const BarraTopo = () => {
                             <img style={{ height: '80px', width: '100%' }} align={'left'} src={logo} />
                         </Link>
                     </div>
-                    <Button component={Link} to="/usuario" variant="text" color="inherit">
-                        Usuários
-                    </Button>
+                    <BarraMenu />
                     <div className={classes.grow} />
                     <div className={classes.containerUsuario}>
                         <div className={classes.usuario}>

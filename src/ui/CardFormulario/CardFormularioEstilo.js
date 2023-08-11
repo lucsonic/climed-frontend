@@ -6,10 +6,12 @@ export const useEstiloCardFormulario = () => {
 
     const useEstilo = makeStyles((tema) => ({
         root: {
-            padding: 10,
+            paddingLeft: 10,
+            paddingRight: 10,
             borderRadius: 10,
             color: modulo === 'default' ? '#c2c2c2' : '#f2f2f2',
-            marginBottom: 10
+            marginBottom: 10,
+            border: 'solid 1px #c2c2c2'
         },
         headerTitulo: {
             fontSize: 20

@@ -4,6 +4,7 @@ import PaginaPadrao from "../PaginaPadrao/PaginaPadrao"
 import { useStorage } from "../../services/contextos/StorageContexto"
 import BarraBottom from "../BarraBottom/BarraBottom"
 import { useEstiloConteudo } from "./ConteudoEstilo"
+import BarraLateral from "../BarraLateral/BarraLateral"
 
 const Conteudo = () => {
     const { token } = useStorage()
@@ -17,6 +18,7 @@ const Conteudo = () => {
 
             <PaginaPadrao>
                 <div className={classes.root}>
+                    <BarraLateral />
                     <Outlet />
                 </div>
             </PaginaPadrao>

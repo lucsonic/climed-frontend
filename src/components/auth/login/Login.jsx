@@ -36,7 +36,7 @@ const Login = (props) => {
             if (data) {
                 alteraToken(data.access_token)
                 alteraCodUsuario(data.usuario.cod_usuario)
-                alteraNomePerfil(data.usuario.perfil.nom_perfil)
+                alteraNomePerfil(data.usuario.perfil[0].nom_perfil)
                 alteraNomeUsuario(data.usuario.nom_usuario)
                 alteraUltimoAcesso(data.ultimo_acesso)
                 alteraNomeEmpresa(data.nome_empresa)
